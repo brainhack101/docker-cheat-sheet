@@ -28,3 +28,4 @@ Quick reference guide for Docker commands - not at all exhaustive, just a cheat 
 | kill most recent container | `docker kill $(docker ps -ql)` |
 | remove all exited containers | `docker rm $(docker ps -qa)` | `rm` only removes exited containers |
 | remove all containers | `docker rm -f $(docker ps -qa)` | `-f` forces `rm` to kill and remove |
+| remove all untagged images | `docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}')`| `grep "<^none>"`finds the images with tag as "<none>" and awk gets its image id|
