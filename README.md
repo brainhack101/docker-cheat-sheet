@@ -12,12 +12,8 @@ Quick reference guide for Docker commands - not at all exhaustive, just a cheat 
 
 | task | command |
 |:-----|:--------|
-
-Remove all untagged images 
-``` docker rmi $(docker images | grep "^<none>" | awk '{print $3}') ```
-
-Remove old images 
-``` docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm ```
+| Remove all untagged images | ``` docker rmi $(docker images `|` grep "^<none>" `|` awk '{print $3}') ``` |
+| Remove old images | ``` docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm ```
 
 
 ## Monitoring/Killing Containers
