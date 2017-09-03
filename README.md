@@ -13,6 +13,7 @@ Quick reference guide for Docker commands - not at all exhaustive, just a cheat 
 | task | command |
 |:-----|:--------|
 | remove all untagged images | `docker rmi $(docker images \| grep "^<none>" \| awk '{print $3}') ` |
+| remove dangling images | `docker rmi $(docker images -q -f dangling=true) ` |
 
 
 ## Monitoring/Killing Containers
