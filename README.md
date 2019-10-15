@@ -29,6 +29,7 @@ Quick reference guide for Docker commands - not at all exhaustive, just a cheat 
 | see hash of running containers | `docker ps -q` | `-q` for hash |
 | see hash of most recent container | `docker ps -ql` | mix `-q` and `-l` for hash of last |
 | see hash of all containers | `docker ps -aq` | ditto for `-a` and `-q` |
+| see running processes | `docker top id container` | use `id container` |
 | kill all running containers | `docker kill $(docker ps -q)` | `kill` only stops running containers |
 | kill most recent container | `docker kill $(docker ps -ql)` |
 | remove all exited containers | `docker container prune` |
